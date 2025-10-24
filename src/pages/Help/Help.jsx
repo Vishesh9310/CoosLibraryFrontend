@@ -1,4 +1,5 @@
 import HelpForm from '../../components/forms/HelpForm';
+import helpImg from '../../assets/help.png';
 
 export default function Help() {
   return (
@@ -38,7 +39,7 @@ export default function Help() {
           </div>
 
           {/* Image */}
-          <img className='h-1/2 w-1/2' src="src/assets/help.png" alt="Professional support representative ready to help" />
+          <img className='h-1/2 w-1/2' src={helpImg} alt="Professional support representative ready to help" />
 
         </div>
       </div>

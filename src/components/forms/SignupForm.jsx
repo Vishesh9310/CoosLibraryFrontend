@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signupUser } from "../../services/authService";
+import signupImg from '../../assets/signup.jpg';
 
 function SignupForm() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ function SignupForm() {
         <div className="hidden lg:flex w-1/2 p-4 justify-center items-center bg-purple-50">
           <img
             className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
-            src="src/assets/signup.jpg"
+            src={signupImg}
             alt="An illustrative image for signup"
           />
         </div>

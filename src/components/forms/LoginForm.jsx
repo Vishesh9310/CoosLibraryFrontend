@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // ✅ import useNavigate
 import { AuthContext } from '../../context/AuthContext';
-
+import loginimg from '../../assets/login.jpg';
 
 function LoginForm() {
   const navigate = useNavigate(); // ✅ initialize navigate
@@ -42,7 +42,7 @@ function LoginForm() {
         <div className='hidden lg:flex w-1/2 p-4 justify-center items-center bg-purple-50'>
           <img
             className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
-            src="src/assets/login.jpg"
+            src={loginimg}
             alt="An illustrative image for login"
           />
         </div>

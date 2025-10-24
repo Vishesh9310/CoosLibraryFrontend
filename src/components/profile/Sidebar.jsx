@@ -19,12 +19,12 @@ const Sidebar = () => {
 
   const handleLogout = async (e) => {
     e.preventDefault();
-    try{
-      await auth?.logout();;
-      setTimeout(() => navigate("/login"),1500);
-      alert("Logout Successfully");
-    }catch(err){
-      alert("Login Successfully");
+    try {
+      await auth?.logout();
+      // alert("Logout Successfully");
+      navigate("/login")
+    } catch (err) {
+      alert("Something went wrong while logging out");
     }
   };
 
@@ -52,10 +52,9 @@ const Sidebar = () => {
               to={item.to}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-5 py-3 mx-1 my-1 rounded-xl text-sm font-medium transition-all duration-300
-                ${
-                  isActive
-                    ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-md"
-                    : "text-gray-700 hover:bg-indigo-100 hover:text-indigo-700"
+                ${isActive
+                  ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-md"
+                  : "text-gray-700 hover:bg-indigo-100 hover:text-indigo-700"
                 }`
               }
               onClick={() => setIsOpen(false)} // auto-close on mobile
