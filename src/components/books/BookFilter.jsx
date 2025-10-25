@@ -1,5 +1,3 @@
-import React, {useEffect} from "react";
-
 const BookFilter = ({ filters, onFilterChange, categories =[] }) => {
     const { category, minPrice, maxPrice } = filters;
     
